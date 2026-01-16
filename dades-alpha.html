@@ -9,7 +9,6 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="icon" type="image/png" href="favicon.png" />
     <style>
-      /* Estils específics per a la pàgina de dades */
       .data-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -19,7 +18,7 @@
       .data-value {
         font-size: 2.5rem;
         font-weight: 700;
-        color: #00ff88; /* Verd neó per a les xifres vives */
+        color: #00ff88;
         margin: 1rem 0;
       }
       .source-label {
@@ -56,8 +55,16 @@
         style="text-align: center; margin-bottom: 4rem"
         data-aos="fade-up"
       >
-        <h1 style="letter-spacing: 0.3em; font-weight: 300">ALPHA INSIGHTS</h1>
-        <p style="opacity: 0.6; max-width: 600px; margin: 1rem auto">
+        <h1
+          style="letter-spacing: 0.3em; font-weight: 300"
+          data-i18n="alpha_title"
+        >
+          ALPHA INSIGHTS
+        </h1>
+        <p
+          style="opacity: 0.6; max-width: 600px; margin: 1rem auto"
+          data-i18n="alpha_subtitle"
+        >
           Accés centralitzat a indicadors oficials. Una eina per a l'anàlisi
           estratègic i la presa de decisions basada en dades.
         </p>
@@ -66,34 +73,47 @@
       <div class="data-grid" data-aos="fade-up">
         <div class="project-card" style="padding: 2.5rem">
           <span class="source-label">World Bank Group</span>
-          <h3 style="margin-top: 0.5rem">PIB Global</h3>
+          <h3 style="margin-top: 0.5rem" data-i18n="data_pib_title">
+            PIB Global
+          </h3>
           <div class="data-value" id="pib-val">--</div>
-          <p style="font-size: 0.9rem; opacity: 0.7">
+          <p style="font-size: 0.9rem; opacity: 0.7" data-i18n="data_pib_desc">
             Creixement anual del producte interior brut a preus de mercat.
           </p>
         </div>
 
         <div class="project-card" style="padding: 2.5rem">
           <span class="source-label">INE / Idescat</span>
-          <h3 style="margin-top: 0.5rem">IPC (Inflació)</h3>
+          <h3 style="margin-top: 0.5rem" data-i18n="data_ipc_title">
+            IPC (Inflació)
+          </h3>
           <div class="data-value">1.9%</div>
-          <p style="font-size: 0.9rem; opacity: 0.7">
+          <p style="font-size: 0.9rem; opacity: 0.7" data-i18n="data_ipc_desc">
             Variació de l'Índex de Preus de Consum harmonitzat.
           </p>
         </div>
 
         <div class="project-card" style="padding: 2.5rem">
           <span class="source-label">BCE / FED</span>
-          <h3 style="margin-top: 0.5rem">Tipus d'Interès</h3>
+          <h3 style="margin-top: 0.5rem" data-i18n="data_rates_title">
+            Tipus d'Interès
+          </h3>
           <div class="data-value">4.50%</div>
-          <p style="font-size: 0.9rem; opacity: 0.7">
+          <p
+            style="font-size: 0.9rem; opacity: 0.7"
+            data-i18n="data_rates_desc"
+          >
             Taxa de referència de les principals entitats monetàries.
           </p>
         </div>
       </div>
 
       <div style="text-align: center; margin-top: 4rem">
-        <a href="index.html" class="btn-primary" style="font-size: 0.8rem"
+        <a
+          href="index.html"
+          class="btn-primary"
+          style="font-size: 0.8rem"
+          data-i18n="btn_back_home"
           >TORNAR A LA HOME</a
         >
       </div>
@@ -102,7 +122,11 @@
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-logo">CARBOMOON</div>
-        <p class="copyright">
+        <div class="footer-links">
+          <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+          <a href="mailto:xaviercarbo@carbomoon.com">Email</a>
+        </div>
+        <p class="copyright" data-i18n="footer_copy">
           &copy; 2026 Carbomoon. Dades d'utilitat pública.
         </p>
       </div>
@@ -114,7 +138,6 @@
       lucide.createIcons();
     </script>
     <script src="translations.js"></script>
-
     <script>
       async function fetchPIB() {
         try {
@@ -125,7 +148,7 @@
           const pib = data[1][0].value.toFixed(2);
           document.getElementById("pib-val").innerText = pib + "%";
         } catch (error) {
-          document.getElementById("pib-val").innerText = "3.1%"; // Dada fallback
+          document.getElementById("pib-val").innerText = "3.1%";
         }
       }
       fetchPIB();

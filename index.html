@@ -90,10 +90,23 @@
           method="POST"
           class="contact-form"
         >
-          <input type="text" name="name" placeholder="NOM" required />
-          <input type="email" name="email" placeholder="EMAIL" required />
+          <input
+            type="text"
+            name="name"
+            data-i18n="form_name"
+            placeholder="NOM"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            data-i18n="form_email"
+            placeholder="EMAIL"
+            required
+          />
           <textarea
             name="message"
+            data-i18n="form_msg"
             placeholder="COM ET PUC AJUDAR?"
             rows="5"
             required
@@ -101,10 +114,11 @@
           <button type="submit" class="btn-submit" data-i18n="form_btn">
             ENVIAR PROPOSTA
           </button>
-          <input type="hidden" name="_next" value="https://carbomoon.com" />
         </form>
       </div>
     </section>
+
+    <!--Footer-->
 
     <footer class="footer">
       <div class="footer-content">
