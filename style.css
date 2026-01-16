@@ -316,28 +316,55 @@ body {
   flex-direction: column;
   gap: 1.5rem;
 }
+
+/* Blindatge del formulari */
 .contact-form input,
 .contact-form textarea {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 1rem;
-  color: white;
+  background: transparent !important; /* Forcem la transparència */
+  border: none !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+  padding: 1.2rem 0.5rem !important;
+  color: #ffffff !important;
   font-family: "Inter", sans-serif;
-  transition: 0.3s;
+  width: 100%;
+  border-radius: 0 !important; /* Treu arrodoniments estranys de mòbil */
+  appearance: none; /* Treu estils per defecte de sistema */
 }
+
+/* Efecte focus quan cliquem per escriure */
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: none;
-  border-bottom-color: white;
+  outline: none !important;
+  border-bottom-color: #ffffff !important;
 }
+
+/* Estil del botó d'enviar perquè no surti quadrat/lleig */
 .btn-submit {
-  background: white;
-  color: black;
-  border: none;
-  padding: 1rem;
-  border-radius: 50px;
-  font-weight: 700;
+  background: #ffffff !important;
+  color: #000000 !important;
+  border: none !important;
+  padding: 1.2rem !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   cursor: pointer;
-  margin-top: 1rem;
+  margin-top: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-submit:hover {
+  transform: scale(1.02);
+}
+
+/* Forçar que els links del footer no siguin blaus */
+.footer-links a,
+.footer-links a:visited {
+  color: rgba(255, 255, 255, 0.5) !important;
+  text-decoration: none !important;
+  border: none !important;
+}
+
+.footer-links a:hover {
+  color: #ffffff !important;
 }
