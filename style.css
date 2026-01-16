@@ -45,12 +45,10 @@ body {
 }
 
 .logo a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: 300;
-  font-size: 1.2rem;
-  letter-spacing: 0.5em; /* Espaiat premium */
-  text-transform: uppercase;
+  text-decoration: none; /* Treu la línia de sota */
+  color: #ffffff; /* Color blanc */
+  font-weight: 300; /* Pes de lletra fi */
+  letter-spacing: 0.5em; /* L'espaiat elegant */
   transition: all 0.4s ease;
 }
 
@@ -200,4 +198,146 @@ body {
 .btn-contact:hover {
   background: #ffffff;
   color: #000000 !important;
+}
+
+/* Forcem que el link del logo sigui sempre blanc, abans i després de visitar-lo */
+.logo a,
+.logo a:visited,
+.logo a:active,
+.logo a:hover {
+  color: #ffffff !important; /* El blanc es manté sempre */
+  text-decoration: none !important; /* Eliminem el subratllat blau/porpra */
+  outline: none; /* Treu qualsevol vora de selecció */
+}
+
+/* Si vols que en passar el ratolí faci un efecte suau (opcional) */
+.logo a:hover {
+  opacity: 0.7;
+  letter-spacing: 0.6em;
+}
+
+.footer {
+  padding: 4rem 5%;
+  background: #050505;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.footer-logo {
+  font-weight: 300;
+  letter-spacing: 0.8em; /* Encara més espaiat per al peu */
+  font-size: 0.9rem;
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+.footer p {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-socials a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #ffffff;
+}
+
+.footer {
+  padding: 6rem 5% 3rem;
+  background: #050505;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer-logo {
+  font-weight: 300;
+  letter-spacing: 0.8em;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.footer-links a {
+  color: var(--text-dim);
+  text-decoration: none;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: 0.4s;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.copyright {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.2);
+  margin-top: 2rem;
+}
+
+.contact-section {
+  padding: 100px 5%;
+  text-align: center;
+}
+.contact-form {
+  max-width: 600px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.contact-form input,
+.contact-form textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  color: white;
+  font-family: "Inter", sans-serif;
+  transition: 0.3s;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-bottom-color: white;
+}
+.btn-submit {
+  background: white;
+  color: black;
+  border: none;
+  padding: 1rem;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 1rem;
 }

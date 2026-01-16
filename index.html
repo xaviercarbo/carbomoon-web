@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="style.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" href="favicon.png" />
   </head>
   <body>
     <nav class="navbar">
       <div class="logo">
-        <a href="#">CARBOMOON</a>
+        <a href="https://carbomoon.com">CARBOMOON</a>
       </div>
       <ul class="nav-links">
         <li><a href="#projectes">Projectes</a></li>
@@ -51,5 +52,37 @@
       AOS.init({ duration: 1000, once: true });
       lucide.createIcons();
     </script>
+    <!-- Contacte -->
+    <section id="contacte" class="contact-section">
+      <div class="contact-container">
+        <h2>Parlem del teu proper projecte</h2>
+        <form
+          action="https://formspree.io/f/https://formspree.io/f/xaqqqnry"
+          method="POST"
+          class="contact-form"
+        >
+          <input type="text" name="name" placeholder="NOM" required />
+          <input type="email" name="email" placeholder="EMAIL" required />
+          <textarea
+            name="message"
+            placeholder="COM ET PUC AJUDAR?"
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit" class="btn-submit">ENVIAR PROPOSTA</button>
+        </form>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">CARBOMOON</div>
+        <div class="footer-links">
+          <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+          <a href="mailto:xaviercarbo@carbomoon.com">Email</a>
+        </div>
+        <p class="copyright">&copy; 2026 Carbomoon. Disseny & Estratègia.</p>
+      </div>
+    </footer>
   </body>
 </html>
