@@ -41,6 +41,8 @@ const translations = {
       "Taxa de referència de les principals entitats monetàries.",
     btn_back_home: "TORNAR A LA HOME",
     footer_copy: "© 2026 Carbomoon. Dades d'utilitat pública.",
+    // Mail Contacte
+    form_success: "PROPUESTA ENVIADA, GRÀCIES!",
   },
   es: {
     // Navegación
@@ -84,6 +86,8 @@ const translations = {
       "Tasa de referencia de las principales entidades monetarias.",
     btn_back_home: "VOLVER A LA HOME",
     footer_copy: "© 2026 Carbomoon. Datos de utilidad pública.",
+    // Mail Contacto
+    form_success: "PROPUESTA ENVIADA, ¡GRACIAS!",
   },
   en: {
     // Navigation
@@ -124,6 +128,8 @@ const translations = {
     data_rates_desc: "Reference rate of the main monetary entities.",
     btn_back_home: "BACK TO HOME",
     footer_copy: "© 2026 Carbomoon. Public utility data.",
+    // Contact mail
+    form_success: "PROPOSAL SENT, THANK YOU!",
   },
 };
 
