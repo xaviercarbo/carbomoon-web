@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carbomoon | Innovació i Disseny</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">CARBOMOON</div>
+      <ul class="nav-links">
+        <li><a href="#projectes">Projectes</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#contacte" class="btn-contact">Contacte</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Dissenyant el futur digital.</h1>
+        <p>
+          Creem experiències d'usuari d'alt impacte amb un enfocament
+          minimalista.
+        </p>
+        <a href="#projectes" class="btn-primary">Explora el treball</a>
+      </div>
+    </section>
+
+    <section id="projectes" class="projects-grid">
+      <div class="project-card" data-aos="fade-up">
+        <div
+          class="project-image"
+          style="
+            background-image: url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000');
+          "
+        ></div>
+        <div class="project-info">
+          <h3>Projecte Alpha</h3>
+          <p>Branding & Web Design</p>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
