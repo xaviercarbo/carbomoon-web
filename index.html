@@ -85,11 +85,7 @@
     <section id="contacte" class="contact-section">
       <div class="contact-container">
         <h2 data-i18n="form_title">Parlem del teu proper projecte</h2>
-        <form
-          action="https://formspree.io/f/xaqqqnry"
-          method="POST"
-          class="contact-form"
-        >
+        <form id="contact-form" class="contact-form">
           <input
             type="text"
             name="name"
@@ -137,5 +133,43 @@
       lucide.createIcons();
     </script>
     <script src="translations.js"></script>
+
+    <script>
+      // SUBSTITUEIX aquesta URL per la que t'ha donat Google Apps Script
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwRwjOyCvR7CJT0St5qyySVWP92EvYKDA6GIuWVNbhZA8HuYE8ngCCSdj82Ty4KGA5n/exec";
+      const form = document.getElementById("contact-form");
+
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+
+          // Busquem el botó per donar feedback visual
+          const btn = form.querySelector(".btn-submit");
+          const originalText = btn.innerText;
+
+          btn.disabled = true;
+          btn.innerText = "...";
+
+          fetch(scriptURL, { method: "POST", body: new FormData(form) })
+            .then((response) => {
+              btn.innerText = "OK"; // Feedback d'èxit
+              form.reset();
+              setTimeout(() => {
+                btn.innerText = originalText;
+                btn.disabled = false;
+              }, 3000);
+            })
+            .catch((error) => {
+              console.error("Error!", error.message);
+              btn.innerText = "ERR"; // Feedback d'error
+              btn.disabled = false;
+              setTimeout(() => {
+                btn.innerText = originalText;
+              }, 3000);
+            });
+        });
+      }
+    </script>
   </body>
 </html>
