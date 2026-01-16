@@ -368,3 +368,28 @@ body {
 .footer-links a:hover {
   color: #ffffff !important;
 }
+
+/*Look amd feel de dades-alpha */
+.data-source {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+.data-source:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #00ff88; /* Un verd neó molt fi per indicar "Dada viva" */
+}
+
+.live-indicator {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  color: #ffffff;
+}
+
+.live-indicator span {
+  color: #00ff88; /* Ressaltem la xifra */
+}

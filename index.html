@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ca">
   <head>
     <meta charset="UTF-8" />
@@ -15,20 +15,25 @@
         <a href="https://carbomoon.com">CARBOMOON</a>
       </div>
       <ul class="nav-links">
-        <li><a href="#projectes">Projectes</a></li>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#contacte" class="btn-contact">Contacte</a></li>
+        <li><a href="#projectes" data-i18n="nav_projects">Projectes</a></li>
+        <li><a href="#sobre" data-i18n="nav_about">Sobre</a></li>
+        <li>
+          <a href="#contacte" class="btn-contact" data-i18n="nav_contact"
+            >Contacte</a
+          >
+        </li>
       </ul>
     </nav>
 
     <section class="hero">
       <div class="hero-content" data-aos="fade-up">
-        <h1>Dissenyant el futur digital.</h1>
-        <p>
-          Creem experiències d'usuari d'alt impacte amb un enfocament
-          minimalista.
+        <h1 data-i18n="hero_title">Dissenyant el futur digital.</h1>
+        <p data-i18n="hero_subtitle">
+          Laboratori de dades i solucions creatives per a reptes reals.
         </p>
-        <a href="#projectes" class="btn-primary">Explora el treball</a>
+        <a href="#projectes" class="btn-primary" data-i18n="btn_explore"
+          >Explora el treball</a
+        >
       </div>
     </section>
 
@@ -40,7 +45,7 @@
         >
           <div
             class="project-image"
-            style="background-image: url('assets/projecte-alpha.jpg')"
+            style="background-image: url(&quot;assets/projecte-alpha.jpg&quot;)"
           ></div>
           <div class="project-info">
             <span
@@ -58,16 +63,28 @@
       </div>
     </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init({ duration: 1000, once: true });
-      lucide.createIcons();
-    </script>
+    <section id="sobre" class="contact-section" style="padding: 100px 5%">
+      <div class="contact-container">
+        <p
+          data-i18n="about_text"
+          style="
+            font-size: 1.2rem;
+            line-height: 1.6;
+            opacity: 0.8;
+            max-width: 800px;
+            margin: 0 auto;
+          "
+        >
+          Carbomoon és una plataforma de recursos digitals. Transformem dades
+          macroeconòmiques i eines de gestió en actius intel·ligents per a un
+          aprenentage intens i estratègic.
+        </p>
+      </div>
+    </section>
 
-    <!-- Contacte -->
     <section id="contacte" class="contact-section">
       <div class="contact-container">
-        <h2>Parlem del teu proper projecte</h2>
+        <h2 data-i18n="form_title">Parlem del teu proper projecte</h2>
         <form
           action="https://formspree.io/f/xaqqqnry"
           method="POST"
@@ -81,12 +98,14 @@
             rows="5"
             required
           ></textarea>
-          <button type="submit" class="btn-submit">ENVIAR PROPOSTA</button>
+          <button type="submit" class="btn-submit" data-i18n="form_btn">
+            ENVIAR PROPOSTA
+          </button>
+          <input type="hidden" name="_next" value="https://carbomoon.com" />
         </form>
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
       <div class="footer-content">
         <div class="footer-logo">CARBOMOON</div>
@@ -97,5 +116,12 @@
         <p class="copyright">&copy; 2026 Carbomoon. Disseny & Estratègia.</p>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+      lucide.createIcons();
+    </script>
+    <script src="translations.js"></script>
   </body>
 </html>
