@@ -141,3 +141,43 @@ body {
   opacity: 0.9;
   transform: scale(1.05);
 }
+
+/*1. Fons amb textura de gra (Noise)*/
+
+body {
+  background-color: #0a0a0a;
+  /* Efecte de gra subtil */
+  background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+  color: #ffffff;
+}
+
+/*2. Targetes amb efecte "Glassmorphism"*/
+
+.project-card {
+  background: rgba(255, 255, 255, 0.03); /* Molt transparent */
+  backdrop-filter: blur(10px); /* Desenfoque del fons */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.project-card:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/*3. Tipografia i espaiat */
+
+h1 {
+  letter-spacing: -0.05em; /* Lletres més juntes, estil modern */
+  line-height: 1.1;
+  background: linear-gradient(
+    180deg,
+    #fff 0%,
+    #888 100%
+  ); /* Degradat al text */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
