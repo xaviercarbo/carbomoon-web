@@ -9,7 +9,7 @@ const translations = {
     hero_title: "Dissenyant el futur digital.",
     hero_subtitle:
       "Laboratori de dades i solucions creatives per a reptes reals.",
-    btn_explore: "Explora el treball",
+    btn_explore: "Explora els projectes",
 
     // Projectes Home
     project_alpha_title: "Projecte Alpha: Insights",
@@ -54,7 +54,7 @@ const translations = {
     hero_title: "Diseñando el futuro digital.",
     hero_subtitle:
       "Laboratorio de datos y soluciones creativas para retos reales.",
-    btn_explore: "Explora el trabajo",
+    btn_explore: "Explora los proyectos",
 
     // Proyectos Home
     project_alpha_title: "Proyecto Alpha: Insights",
@@ -98,7 +98,7 @@ const translations = {
     // Hero Section
     hero_title: "Designing the digital future.",
     hero_subtitle: "Data lab and creative solutions for real-world challenges.",
-    btn_explore: "Explore work",
+    btn_explore: "Explore the projects",
 
     // Projects Home
     project_alpha_title: "Project Alpha: Insights",
