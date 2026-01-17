@@ -98,7 +98,7 @@ const translations = {
     // Hero Section
     hero_title: "Designing the digital future.",
     hero_subtitle: "Data lab and creative solutions for real-world challenges.",
-    btn_explore: "Explore the projects",
+    btn_explore: "Explore projects",
 
     // Projects Home
     project_alpha_title: "Project Alpha: Insights",
